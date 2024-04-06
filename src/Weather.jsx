@@ -28,8 +28,8 @@ function Weather() {
     const location = document.getElementsByClassName("weather_location");
 
     humidity[0].innerHTML = data.main.humidity + " %";
-    wind[0].innerHTML = data.wind.speed + " km/h";
-    temperature[0].innerHTML = data.main.temp + "°C";
+    wind[0].innerHTML = Math.floor(data.wind.speed) + " km/h";
+    temperature[0].innerHTML = Math.ceil(data.main.temp) + "°C";
     location[0].innerHTML = data.name;
 
     if (data.weather[0].icon === "01d" || data.weather[0].icon === "01n") {
